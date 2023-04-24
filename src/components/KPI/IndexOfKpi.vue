@@ -6,7 +6,7 @@
                 {{ text || 'Content' }}
             </div>
             <div class="flex" style="gap:10px;margin-left: 10%;">
-                <div class="relative top-5">
+                <div :class="value<0 ? 'relative topN-5' : 'relative top-5'">
                     <font-awesome-icon icon="fa-solid fa-sort-down" class="sortIcon" style="color:red" v-if="value<0"/>
                     <font-awesome-icon icon="fa-solid fa-sort-up" class="sortIcon" style="color:green" v-if="value>0"/>
                 </div>
