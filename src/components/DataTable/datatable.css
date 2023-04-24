@@ -40,13 +40,13 @@
     cursor: pointer;
 }
 .downloadMianBox{
-    margin-left: -50%;
+    margin-left: 50%;
 }
 .rotateIcon{
     font-size: 25px;
     color: rgb(163, 163, 216);
     position: relative;
-    top:7px;
+    top:5px;
     right: 10px;   
     cursor: pointer; 
 }
