@@ -1,25 +1,27 @@
 <template>
     <div class="MainTable">
 
-        <div class="MenuBar">
+        <div class="MenuBar mt-20">
             <div>
                 <font-awesome-icon icon="fa-solid fa-magnifying-glass" class="searchIcon"/>
                 <input type="text" v-model="search" name="" placeholder="Search something" id="" class="inputForSearch">
             </div>
-            <div>
-                <button @click="handleDownload" v-if="data.length">
-                    {{ data.length }} users Download
-                </button>
+            <div  class="flex flex-row gap-15 downloadMianBox" v-if="data.length">
+                <div class="relative top-11">
+                    {{ data.length }} users 
+                </div>
+                <div>
+                    <font-awesome-icon icon="fa-solid fa-cloud-arrow-down" @click="handleDownload" class="downloadIcon"/>
+                </div>
             </div>
             <div>
-                <button @click="handleRefresh">
-                    refresh
-                </button>
+                <font-awesome-icon icon="fa-solid fa-arrows-rotate"  @click="handleRefresh" class="rotateIcon"/>
+                <!-- <font-awesome-icon icon="fa-solid fa-arrows-rotate"  @click="handleRefresh" spin class="rotateIcon"/> -->
             </div>
 
         </div>
 
-        <div class="table">
+        <div class="table mt-5">
             <table>
                 <tr class="tableHeaderName">
                     <th>Id</th>
@@ -56,7 +58,7 @@
             </table>
         </div>
 
-        <div class="width-100 center-row mt-20">
+        <div class=" paginationContainer">
             <div class="PaginationMain">
                 <button @click="Paginator(1)">
                     <font-awesome-icon icon="fa-solid fa-angles-left" />
@@ -228,7 +230,10 @@ export default {
             var start = this.pagesarray[0];
             var end = this.pagesarray[this.pagesarray.length - 1];
             if (!val || val < this.pagesarray.length) {
-                for (var i = 1; i <= (this.pagesarray.length || 7); i++) {
+                // if(this.pagesarray.length < (total_pages && 7)){
+                //     this.pagesarray.length=7
+                // }
+                for (var i = 1; i <= 7 ; i++) {
                     if (i < total_pages) {
                         arr.push(i)
                     }

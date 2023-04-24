@@ -6,6 +6,18 @@
    flex-direction: row;
    justify-content: center;
 }
+.relative{
+    position: relative;
+}
+.gap-15{
+    gap:15px;
+}
+.top-5{
+    top:5px;
+}
+.top-11{
+    top:11px;
+}
 .flex{
     display: flex;
 }
