@@ -1,0 +1,68 @@
+.tableHeaderName>th{
+    background-color: rgb(163, 163, 216);
+}
+
+.tableContent:hover{
+    background-color: rgb(219, 218, 218);
+    cursor: pointer;
+}
+
+/* Name filter */
+#filter:hover{
+    cursor: pointer;
+    background-color: rgb(132, 192, 132);
+}
+/* Top Menu BAR */
+.MenuBar{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+.inputForSearch{
+    width:200px;
+    height: 25px;
+    border-radius: 7px;
+    border: 2px solid rgb(163, 163, 216);
+    text-indent: 25px;
+    margin-left: -10px;
+}
+.inputForSearch:hover{
+    border: 2px solid rgb(163, 163, 216);   
+}
+.searchIcon{
+    position: relative;
+    left:14px;
+    top: 1px;
+    color: rgb(198, 196, 196);
+}
+/* pagination */
+
+.PaginationMain{
+    width:600px;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+.PaginationMain>button{
+    border: none;
+    background-color: white;
+    font-size: 20px;
+    width:50px; 
+    height: 35px;
+
+}
+.PaginationMain>button:hover{
+    background-color: rgb(163, 163, 216);
+    color: white;
+    cursor: pointer;
+    border-radius: 7px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#ActiveButton{
+    background: rgb(163, 163, 216);
+    color: white;
+    cursor: pointer;
+    border-radius: 7px;
+    box-shadow: rgb(163, 163, 216) 0px 3px 8px;
+}
