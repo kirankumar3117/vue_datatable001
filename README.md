@@ -1,5 +1,8 @@
 # data_table002
 
+##with only using plane javascript
+
+
 ## Project setup
 ```
 npm install
