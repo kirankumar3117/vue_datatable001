@@ -227,13 +227,13 @@ export default {
         setPaginationArray(val) {
             const total_pages = Math.ceil(this.data.length / 5);
             let arr = [];
-            var start = this.pagesarray[0];
-            var end = this.pagesarray[this.pagesarray.length - 1];
+            let start = this.pagesarray[0];
+            let end = this.pagesarray[this.pagesarray.length - 1];
             if (!val || val < this.pagesarray.length) {
                 // if(this.pagesarray.length < (total_pages && 7)){
                 //     this.pagesarray.length=7
                 // }
-                for (var i = 1; i <= 7 ; i++) {
+                for (let i = 1; i <= 7 ; i++) {
                     if (i < total_pages) {
                         arr.push(i)
                     }
@@ -242,7 +242,7 @@ export default {
                 arr = []
             }
             else if (val == total_pages) {
-                for (i = total_pages; i > total_pages - this.pagesarray.length; i--) {
+                for (let i = total_pages; i > total_pages - this.pagesarray.length; i--) {
                     arr.push(i);
                 }
                 this.pagesarray = arr.reverse();
@@ -260,7 +260,7 @@ export default {
                     arr = []
                 }
                 else if (val == start) {
-                    for (i = start; i > start - this.pagesarray.length; i--) {
+                    for (let i = start; i > start - this.pagesarray.length; i--) {
                         if (i >= 1) {
                             arr.push(i);
                         }
